@@ -1,0 +1,59 @@
+
+.footer{
+  height: 250px;
+  font-size: 20px;
+  width: 100vw;
+  /* margin: 0 auto; */
+  /* width: 100%; */
+  max-width: 1024px;
+  /* padding-left: 300px; */
+}
+.devider{
+  height: 170px;
+  
+  border: solid 1px #dbcece;
+}
+.footer-wrapper{
+  color: #333;
+  /* padding: 40px; */
+  display: flex;
+  /* gap: 80px 40px; */
+  align-items: center;
+}
+.footer-school-name{
+  width: 500px; 
+}
+.footer-school-name{
+  text-align: center;
+}
+.footer-school{
+  /* margin:20px; */
+  width: 400px;
+  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+small{font-size: 16px;}
+.footer-sv{
+
+}
+.sv-info{
+  display: flex;
+  gap: 15px;
+  margin-left: 40px;
+}
+.gvhd{
+  text-align: center;
+  margin-bottom: 40px ;
+  font-weight: 500;
+}
+/* ul{padding: 0;} */
+.footer-img-container{
+ 
+}
+.footer-img{
+  height: 100px;
+  width: 100px;
+
+}

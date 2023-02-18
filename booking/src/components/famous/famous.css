@@ -1,0 +1,82 @@
+.famous{
+    width:68% ;
+
+
+}
+.famous-item  {
+display: flex;
+font-size: 20px;
+text-align: center;
+color: rgb(5, 39, 70);
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+     
+  
+}
+
+.famous-line1-item{
+ height: 45vh;
+ width: 40vw;   
+ margin: 10px;
+
+}
+.famous-line1-item-first{
+    
+    height: 45vh;
+    width: auto;
+    background-size: "cover";  
+    background-position:center top;
+    object-fit: cover;
+    cursor: pointer;
+
+   
+}
+
+.famous-line1-item-second{
+    height: 45vh;
+    width: auto;
+   
+    background-size: "cover";  
+    background-position:center right;
+    cursor: pointer;
+
+ 
+}
+
+
+.famous-line2-item{
+    height: 40vh;
+    width: 26.7vw;
+    margin: 10px;
+    background-position:center center;
+    overflow: hidden
+}
+.famous-line2-item-first{
+    height: 360px;
+    width: auto;
+    
+    background-size: "cover";  
+    background-position:center ;
+    cursor: pointer;
+}
+.famous-line2-item-second{
+    height: 45vh;
+    width: auto;
+   
+    background-size: "cover"; 
+    background-position:center top; 
+    cursor: pointer;
+}
+.famous-line2-item-third{
+    height: 45vh;
+    width: auto;
+    background-size: "cover";  
+    background-position:center center;
+    object-fit: cover;
+    cursor: pointer;
+    
+}
+.fmgray-bg{
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
