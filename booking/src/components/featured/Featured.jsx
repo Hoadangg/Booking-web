@@ -10,9 +10,14 @@ import './featured.css';
 import imgGirl from './assets/images/defaultImage.jpg';
 import { useContext } from 'react';
 import { SearchContext } from '../../context/SearchContext.js';
-import { useEffect } from 'react';
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Featured() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   const [defaultImage, setDefaultImage] = useState({});
   const [destination, setDestination] = useState('');
   // const [dates, setDate] = useState();
@@ -62,7 +67,7 @@ function Featured() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -96,7 +101,7 @@ function Featured() {
     <div className="featured-1">
       <Slider {...settings}>
         {imgArr.map((img,idx) => (
-          <div key={idx} onClick={()=>handleClick(idx)} className="card-1">
+          <div data-aos= "fade-up" key={idx} onClick={()=>handleClick(idx)} className="card-1">
             <div className="card-top-1">
               <img
                 src={

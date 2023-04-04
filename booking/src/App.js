@@ -21,7 +21,8 @@ import UpdateHotel from "./admin/pages/updateHotel/UpdateHotel.jsx";
 
 import { userInputs, hotelInputs, roomInputs } from "./admin/formSource.js";
 import EditContent from "./admin/pages/editContent/EditContent.jsx";
-
+import Tour from "./components/tours/Tour";
+import Tours from "./pages/tour/Tours";
 function App() {
   
   
@@ -36,6 +37,7 @@ function App() {
               <Route path="/hotels/:id" element={<Hotel />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/tours/:id" element={<Tours/>}/>
               <Route
                 path="/admin"
                 element={

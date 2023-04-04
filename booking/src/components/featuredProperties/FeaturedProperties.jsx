@@ -5,11 +5,16 @@ import "slick-carousel/slick/slick-theme.css";
 import useFetch from "../../hooks/useFetch";
 import "./featuredProperties.css";
 import { useNavigate } from "react-router-dom";
-
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import imgGirl from "./assets/images/defaultImage.jpg";
 
 function FeaturedProperties() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   const {data} = useFetch("http://localhost:8800/api/hotels?featured=true")
   const [defaultImage, setDefaultImage] = useState({});
   const settings = {
@@ -62,7 +67,7 @@ function FeaturedProperties() {
     <div className="featuredProperties  ">
       <Slider {...settings}>
         {data.map((item,idx) => (
-          <div key={idx} onClick={()=>{handleClick(item._id)}} className="cardPro">
+          <div  key={idx} onClick={()=>{handleClick(item._id)}} className="cardPro" data-aos= "fade-up">
             <div className="card-topPro">
               <img
                 src={

@@ -103,7 +103,7 @@ const [options, setOptions] = useState(location.state.options || {
 
 
   return (
-    <div onClick={openDate ? turnOffDate :undefined} >
+    <div className="list-page" onClick={openDate ? turnOffDate :undefined} >
       <Navbar type="list" />
       <Header type="list" />
       <div className="listContainer">
@@ -111,6 +111,7 @@ const [options, setOptions] = useState(location.state.options || {
           <div className="listSearchContainer">
             <div className="listSearch">
               <h1 className="lsTitle">Search</h1>
+             
               <div className="lsItem">
                 <label>Destination</label>
                 <input placeholder={destination} type="text" onChange={(e)=>{setDestination(e.target.value.split(" ").join("").toLowerCase())}}/>
@@ -154,7 +155,7 @@ const [options, setOptions] = useState(location.state.options || {
                     max={999}
                     onChange={({ min, max }) =>{setMin(min);setMax(max)}}
                   />
-                  <div className="lsOptionItem">
+                  {/* <div className="lsOptionItem">
                     <span className="lsOptionText">Adult</span>
                     <input
                       type="number"
@@ -180,7 +181,7 @@ const [options, setOptions] = useState(location.state.options || {
                       className="lsOptionInput"
                       placeholder={options.room}
                     />
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <button onClick={handleSearch}>Search</button>
@@ -214,7 +215,7 @@ const [options, setOptions] = useState(location.state.options || {
 
        
       </marquee> */}
-      <div style={{"padding-left":"200px","margin-top":"20px"}}>
+      <div style={{"margin-top":"20px"}}>
         <Footer/>
 
       </div>

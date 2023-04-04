@@ -13,8 +13,9 @@
 
 
 .formInput-label{
-    font-size: 12px;
-    color: gray;
+    font-size: 1.25vw;
+    font-weight: 600;
+    color: rgb(11, 1, 1);
 }
 
 .formInput-error{

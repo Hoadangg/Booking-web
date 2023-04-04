@@ -1,35 +1,48 @@
+
+
 .datatable {
-  height: 600px;
+  height: 65vh;
   padding: 20px;
-  width: 1051px;
+  width: 60vw;
   .datatableTitle {
-    width: 100%;
-    font-size: 24px;
-    color: gray;
-    margin-bottom: 10px;
+    width: 98%;
+    font-size: 2vw;
+    color: rgb(18, 17, 17);
+    margin-bottom: 1.5vh;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #f3f3f354;
+    padding: 1.5vh;
+    border-radius: 10px;
 
     .link {
       text-decoration: none;
-      color: green;
+      color: rgb(8, 71, 148);
       font-size: 16px;
       font-weight: 400;
-      border: 1px solid green;
+      border: 1px solid  rgb(8, 71, 148);
+
       padding: 5px;
       border-radius: 5px;
       cursor: pointer;
+      transition: .3s;
+    }
+    .link:hover{
+      background-color: rgb(6, 120, 143);
+      color: white;
     }
   }
 
   .cellWithImg {
     display: flex;
     align-items: center;
+    font-size: .9vw;
 
     .cellImg {
-      width: 32px;
-      height: 32px;
+      width: 2vw;
+      height: 2vw;
       border-radius: 50%;
       object-fit: cover;
       margin-right: 20px;
@@ -70,9 +83,27 @@
     .deleteButton {
       padding: 2px 5px;
       border-radius: 5px;
-      color: crimson;
+      color: rgb(233, 11, 55);
       border: 1px dotted rgba(220, 20, 60, 0.6);
       cursor: pointer;
     }
   }
+}
+.MuiDataGrid-virtualScrollerContent{
+  // background-color: rgb(241, 247, 249);
+}
+
+
+
+// .MuiDataGrid-main .css-204u17-MuiDataGrid-main{
+// background-color: transparent !important;
+// background-color: aqua !important;
+// }
+
+.MuiDataGrid-main{
+  background-color: #f3f3f354;
+}
+.css-levciy-MuiTablePagination-displayedRows{
+  font-size: 1vw !important;
+  color: rgb(186, 183, 183) !important;
 }

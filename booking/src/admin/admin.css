@@ -13,3 +13,10 @@
 .admin_content-text{
     text-align: center;
 }
+.admin{
+    height: 100vh;
+    overflow: hidden;
+     background-image: url("https://www.ideas.org.au/images/resources/blog/Aircraft.png");
+    background-repeat: no-repeat;
+    background-size:cover
+}

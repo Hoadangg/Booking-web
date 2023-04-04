@@ -107,7 +107,7 @@ export default class Slideshow extends React.Component {
    */
   componentDidMount() {
     this.rootElm = ReactDOM.findDOMNode(this);
-    this.containerElm = this.rootElm.querySelector(".container");
+    this.containerElm = this.rootElm.querySelector(".containerr");
 
     this.updateDimensions();
     window.addEventListener("resize", this.updateDimensions);
@@ -141,7 +141,7 @@ export default class Slideshow extends React.Component {
   render() {
     return (
       <div className="lp-slideshow">
-        <div className="container">
+        <div className="containerr">
           {this.props.input.map((image, index) => {
             return (
               <div

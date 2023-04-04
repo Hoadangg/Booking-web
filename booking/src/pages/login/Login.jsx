@@ -68,8 +68,13 @@ const Login = () => {
   return (
     <div className="login">
       <Navbar type="list" login="login" register="register"/>
-
+     
        <div className="login-app">
+       <div className="loginTitle">
+       <img src="https://png.pngtree.com/png-clipart/20220705/ourmid/pngtree-blink-bling-stars-cartoon-png-image_5683010.png" alt="" />
+        Welcome to Booking
+        <img src="https://png.pngtree.com/png-clipart/20220705/ourmid/pngtree-blink-bling-stars-cartoon-png-image_5683010.png" alt="" />
+      </div>
       <form className="login-form" onSubmit={handleClick}>
         <h1 className="login-text">Login</h1>
         {inputs.map((input) => (

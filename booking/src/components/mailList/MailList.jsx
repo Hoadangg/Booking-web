@@ -2,8 +2,16 @@ import "./mailList.css"
 import axios from "axios";
 import { useState,useRef } from "react";
 import validator from 'validator'
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 
 const MailList = () => {
+  
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   const [mail,setMail] = useState("")
   const inputRef = useRef(null)
   console.log(mail)
@@ -48,12 +56,14 @@ const MailList = () => {
 
   
   return (
-    <div className="mail">
+    <div className="mail"data-aos= "fade-down">
       <h1 className="mailTitle">Save time, save money!</h1>
-      <span className="mailDesc">Sign up and we'll send the best deals to you</span>
+      <span className="mailDesc" >Sign up and we'll send the best deals to you</span>
       <div className="mailInputContainer">
         <input ref={inputRef} type="text" placeholder="Your Email" onChange={(e)=>{validateEmail(e);setMail(e.target.value)}} />
-        <button onClick={sendMail}>Subscribe</button>
+        <button onClick={sendMail}>
+          <img src="https://cdn-icons-png.flaticon.com/512/858/858933.png" alt="" />
+          Subscribe</button>
       </div>
       {  <span style={{
           fontWeight: 'bold',

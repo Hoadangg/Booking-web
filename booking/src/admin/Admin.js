@@ -24,12 +24,14 @@ function Admin() {
 
   return (
     <>
+      <div className="admin">
       <Navbar type="list" />
       <div className="admin_content-wrapper"></div>
       <div className="admin_content">
         <Sidebar />
         <Outlet />
         {/* <h3 className="admin_content-text" >WELCOME TO ADMIN DASHBOARD</h3> */}
+      </div>
       </div>
     </>
     // <div className={darkMode ? "app dark" : "app"}>

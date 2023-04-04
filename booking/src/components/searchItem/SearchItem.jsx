@@ -5,6 +5,7 @@ const SearchItem = ({ item }) => {
  const navigate = useNavigate();
  const gotoHotel=(id)=>{
   navigate(`/hotels/${id}`)
+  window.location.reload();
   //`/hotels/${item._id}`
  }
   return (

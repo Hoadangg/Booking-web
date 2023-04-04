@@ -22,7 +22,7 @@ export default function GGmap() {
                   
                   </div>
                   <a href="https://maps.google.com/maps?ll=10.850048,106.766314&amp;z=17&amp;t=m&amp;hl=en&amp;gl=US&amp;mapclient=embed&amp;q=1%20%C4%90.%20V%C3%B5%20V%C4%83n%20Ng%C3%A2nB%C3%ACnh%20Th%E1%BB%8D%2C%20Th%E1%BB%A7%20%C4%90%E1%BB%A9c%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh" >
-                  <button  className='modalMapBtn'>show on map</button>
+                  <button  className='modalMapBtn'>Show on map</button>
 
                   </a>
                 </div>

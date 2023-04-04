@@ -8,42 +8,44 @@
 } */
 
 .featured-1 {
-  width: 70%;
-  margin: 0 auto;
- 
+  width : 70%;
+  margin: -20px auto;
+
 }
 
-.slick-slide > div {
+.slick-slide>div {
   margin: 0 10px;
 }
+
 .slick-list {
   margin: 0 -10px;
 }
 
 .card-1 {
-  border: 1px solid #fff;
-  background: black;
+  border       : 1px solid #fff;
+  background   : black;
   border-radius: 8px;
-  overflow: hidden;
+  overflow     : hidden;
 
   height: 300px;
-  color: #fff;
+  color : #fff;
   cursor: pointer;
 }
 
 .card-top-1 h1 {
   font-size: 0.9rem;
-  margin: 20px;
+  margin   : 20px;
 }
- /* p{
+
+/* p{
   
   background-color: #0000005c;
   height: 45px;
   color: #fff;
 }  */
-.card-top-1 > img {
-  width: 100%;
-  height: 200px;
+.card-top-1>img {
+  width     : 100%;
+  height    : 200px;
   object-fit: cover;
   background: black;
 }
@@ -55,42 +57,74 @@
 .category-1 {
   position: relative;
 }
+
 .category-1::before {
-  content: '';
+  content   : '';
   background: rgb(255, 61, 61);
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 0;
-  right: 0;
-  height: 2px;
+  position  : absolute;
+  top       : calc(100% + 10px);
+  left      : 0;
+  right     : 0;
+  height    : 2px;
 }
-.slick-prev:before, .slick-next:before{
-  color: black;
+
+.slick-prev:before,
+.slick-next:before {
+  color    : black;
   font-size: 44px;
+  position : absolute;
+}
+
+.slick-prev:before {
+
+  top : -28px;
+  left: -1px;
+}
+
+.slick-next:before {
+
+  top  : -28px;
+  right: -23px;
+}
+
+.slick-prev,
+.slick-next {
   position: absolute;
+  z-index : 10000;
 }
-.slick-prev:before{
- 
-    top: -28px;
-    left: -1px;
-}
-.slick-next:before{
- 
-    top: -28px;
-    right: -23px;
-}
-.slick-prev,.slick-next{
-  position: absolute;
-  z-index: 10000;
-}
-.slick-prev{
+
+.slick-prev {
   left: -20px;
 
 }
-.slick-next{
+
+.slick-next {
   right: 2px;
 
 }
-.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
   opacity: 0;
+}
+
+@media screen and (max-width:480px) {
+  .card-1 {
+    width: 35vw !important;
+    height: 50vw;
+  }
+
+  .card-top-1>img {
+    width : 35vw;
+    height: 35vw;
+    object-fit: cover;
+  }
+  .card-top-1 h1{
+    font-size: 3vw;
+    margin: 2px 5px;
+  }
+  .card-bottom-1{
+    font-size: 3vw;
+  }
+
 }

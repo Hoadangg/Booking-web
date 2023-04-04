@@ -21,8 +21,14 @@ import 'tippy.js/themes/light.css';
 
 import { SearchContext } from "../../context/SearchContext.js";
 
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Header = ({ type,openDate,handleOpenDate}) => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   const [destination, setDestination] = useState("");
   // const [openDate, setOpenDate] = useState(false);
   const [dates, setDate] = useState([
@@ -87,46 +93,46 @@ const Header = ({ type,openDate,handleOpenDate}) => {
   };
   
   return (
-    <div className="header" style={type === "list"?{backgroundColor: "#003580",height: "86px"}:{backgroundColor:"transparent",height: "558px"}}>
+    <div className="header" style={type === "list"?{backgroundColor: "#003580"}:{backgroundColor:"transparent",height: "558px"}}>
       <div
         className={
           type === "list" ? "headerContainer listMode" : "headerContainer"
         }
         
       >
-        <div className="headerList">
+        <div className="headerList" data-aos= "fade-down">
           <div className="headerListItem active">
-            <FontAwesomeIcon icon={faBed} />
+            <FontAwesomeIcon className="iconHeader" icon={faBed} />
             <span>Stays</span>
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faPlane} />
+            <FontAwesomeIcon className="iconHeader" icon={faPlane} />
             <span>Flights</span>
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faCar} />
+            <FontAwesomeIcon className="iconHeader" icon={faCar} />
             <span>Car rentals</span>
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faBed} />
+            <FontAwesomeIcon className="iconHeader" icon={faBed} />
             <span>Attractions</span>
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faTaxi} />
+            <FontAwesomeIcon className="iconHeader" icon={faTaxi} />
             <span>Airport taxis</span>
           </div>
         </div>
         {type !== "list" && (
           <>
-            <h4 className="headerTitle">
+            <h4 className="headerTitle" data-aos= "fade-left">
               Available until 3 Jan 2023
             </h4>
-            <h1> Save 15% with Late Escape Deals </h1>
-            <p className="headerDesc">
+            <h1 className="headerSave" data-aos= "fade-left"> Save 15% with Late Escape Deals </h1>
+            <p className="headerDesc" data-aos= "fade-left">
             There’s still time to tick one more destination off your wishlist
             </p>
-            <button className="headerBtn">Explore deal</button>
-            <div className="headerSearch">
+            <button className="headerBtn" data-aos= "fade-up">Explore deal</button>
+            <div className="headerSearch" data-aos= "fade-up">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />
 
@@ -139,7 +145,7 @@ const Header = ({ type,openDate,handleOpenDate}) => {
                   />
               </div>
              
-              <div className="headerSearchItem">
+              {/* <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
                 <span
                   onClick={() => handleOpenDate()}
@@ -233,8 +239,8 @@ const Header = ({ type,openDate,handleOpenDate}) => {
                     </div>
                   </div>
                 )}
-              </div>
-              <div className="headerSearchItem">
+              </div> */}
+              <div className="headerSearchItem headertb" >
                 <button id="myButton" className="headerBtn" onClick={handleSearch}>
                   Search
                 </button>
